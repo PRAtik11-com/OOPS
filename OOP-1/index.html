@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilevel</title>
+</head>
+<body>
+   
+    <script src="main.js"></script>
+<script>
+
+    class Model{
+        constructor(modelname){
+            this.modelname = modelname
+        }
+    }
+
+    class company extends Model{
+        constructor(modelname , companyname){
+            super(modelname)
+            this.companyname = companyname
+        }
+    }
+
+    class car extends company{
+        constructor(modelname , companyname , price){
+            super(modelname, companyname)
+            this.price = price
+        }
+
+        getinfo(){
+            console.log(this.modelname ,this.companyname ,this.price);
+        }
+    }
+
+    let  object = new car("kaix5", "kai" , "1700000")
+    object.getinfo()
+</script>
+
+</body>
+</html>
